@@ -10,6 +10,8 @@ def add_prototypes(path, file_name, list):
     lines = file.readlines()
     for i in range(len(lines) - 1):
         if is_a_type(lines[i]) and lines[i+1][0] == "{" and lines[i][:8] != "int\tmain":
+            if(lines[i][:3] == "int"):
+                lines[i] = lines[i][:3] + "\t" + lines[i][3:]
             list.append(lines[i][:-1] + ";\n")
     file.close()
 
@@ -35,7 +37,7 @@ def generate_output(path, header_file_name, prototype_list):
 
 def main():
     if len(sys.argv) != 3:
-        path = input("Enter prohect path\n")
+        path = input("Enter project path\n")
         header_file_name = input("Enter header file location inside directory (folder/header.h)\n")
     else:
         path = sys.argv[1]
