@@ -66,7 +66,5 @@ def main():
     header_file.write("".join(new_header))
     header_file.close()
 
-    print("Success!")
-
 if __name__ == "__main__":
     main()
