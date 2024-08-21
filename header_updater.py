@@ -58,8 +58,7 @@ def main():
     tab_number = find_longest_type(prototype_list)
     
     for i in range(len(prototype_list)):
-        prototype_list[i] = prototype_list[i].split("\t")[0] + "\t" * (tab_number - len(prototype_list[i].split("\t")[0])//4) + prototype_list[i].split("\t")[1]
-
+        prototype_list[i] = prototype_list[i].split("\t")[0] + "\t" * (tab_number - len(prototype_list[i].split("\t")[0])//4) + prototype_list[i].split("\t")[-1]
     new_header = generate_output(path,header_file_name, prototype_list)
 
     header_file = open(path + header_file_name, "w")
