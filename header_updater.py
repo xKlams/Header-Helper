@@ -25,12 +25,12 @@ def generate_output(path, header_file_name, prototype_list):
     header_file.close()
 
     i = 0
-    while i < (len(header_lines)):
+    while i < len(header_lines):
         if(is_a_type(header_lines[i])):
             header_lines.pop(i)
             i = i-1
         i += 1
-    return header_lines[:-2] + prototype_list + header_lines[-2:]
+    return header_lines[:-1] + prototype_list + header_lines[-1:]
 
 def find_longest_type(prototype_list):
     max_len = 0
