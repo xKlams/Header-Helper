@@ -1,4 +1,4 @@
-# Header-Helper
+# Header_Updater
 Simple Python and Bash script to update your header file with prototypes of the function in your .c files.
 
 inotify-tools is needed, to install use
