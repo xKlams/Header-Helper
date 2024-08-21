@@ -30,6 +30,8 @@ def generate_output(path, header_file_name, prototype_list):
             header_lines.pop(i)
             i = i-1
         i += 1
+    if(header_lines[-2] == "\n"):
+        return header_lines[:-2] + prototype_list + header_lines[-2:]
     return header_lines[:-1] + prototype_list + header_lines[-1:]
 
 def find_longest_type(prototype_list):
