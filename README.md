@@ -15,6 +15,8 @@ For example if my project is in "/home/user/projects/test/" and my header file i
 
         sh start.sh ~/projects/test/ /headers/file.h
 
+You are free to use the relative or absolute path for the project folder
+
 This will update your header file every time there is a change in you .c files.
 
 To stop the background process just use
