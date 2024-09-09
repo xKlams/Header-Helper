@@ -3,7 +3,7 @@ from os.path import isfile, join
 import sys
 
 def is_a_type(line):
-    return(line[0] != "#" and line[0] != "\t" and line[0] != "}" and line[0] != "{" and line[:7] != "typedef" and line[0] != "\n")
+    return(line[0] != "#" and line[0] != "\t" and line[0] != "}" and line[0] != "{" and line[:7] != "typedef" and line[0] != "\n" and line[0] != '\\')
 
 def add_prototypes(path, file_name, list):
     file = open(path +  file_name, "r")
